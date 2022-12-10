@@ -45,10 +45,10 @@ jobs:
         with:
           context: .
           tags: |
-            ghcr.io/addismap/AddisMapTransit-web:test-${{ env.SLUG_GITHUB_REF_NAME }}
+            ghcr.io/addismap/addismaptransit-web:test-${{ env.SLUG_GITHUB_REF_NAME }}
           load: true
       - name: Tag "latest" and Push to GitHub Container Registry
         if: github.ref == 'refs/heads/main'
         run: |
-          docker tag ghcr.io/addismap/AddisMapTransit-web:test-${{ env.SLUG_GITHUB_REF_NAME }} ghcr.io/addismap/AddisMapTransit-web:latest
-          docker push ghcr.io/addismap/AddisMapTransit-web:latest
+          docker tag ghcr.io/addismap/addismaptransit-web:test-${{ env.SLUG_GITHUB_REF_NAME }} ghcr.io/addismap/addismaptransit-web:latest
+          docker push ghcr.io/addismap/addismaptransit-web:latest
