@@ -143,7 +143,7 @@ map:
   #       font-family: Hind, sans-serif
   #       font-size: 18px
   #   disableFlexArc: true
-  
+
 
 # it is possible to leave out a geocoder config entirely. In that case only
 # GPS coordinates will be used when finding the origin/destination.
@@ -195,10 +195,10 @@ geocoder:
 # Use this mode config for the enhanced Transit+ config
 modes:
   # This is the default behavior for flex merging.
-  # If set to false, each FLEX mode (FLEX_EGRESS,FLEX_ACCESS,FLEX_DIRECT) will 
-  # be treated separately. If set to true, a single FLEX mode will automatically 
+  # If set to false, each FLEX mode (FLEX_EGRESS,FLEX_ACCESS,FLEX_DIRECT) will
+  # be treated separately. If set to true, a single FLEX mode will automatically
   # be expanded and reduced to those three modes.
-  mergeFlex: true 
+  mergeFlex: true
   modeOptions:
     - mode: TRANSIT
     - mode: WALK
@@ -207,8 +207,8 @@ modes:
     - mode: RENT
       icon: mobile
       # This overrides the label generated from the i18n. Use when defining modes that are not supported by OTP i18n
-      # label: Rental 
-      
+      # label: Rental
+
   transitModes:
     - mode: BUS
       label: Bus
@@ -440,9 +440,9 @@ itinerary:
 # popups:
 #   targets:
 #     testTarget: # To set a name for this target, create the i18n string "config.popups.testTarget"
-#       url: http://example.com/ 
+#       url: http://example.com/
 #       modal: false # Setting this to false always launches the popup as a browser popup
-#     secondTarget: 
+#     secondTarget:
 #       url: http://test.com/
 #       appendLocale: false # Defaults to true, if set to false otp-rr will not append the current i18n language to the popup URL.
 #   launchers:
@@ -526,6 +526,9 @@ itinerary:
 #  # and in the user-selected locale) if no fare or currency info is available.
 #  currency: 'USD'
 #  defaultLocale: 'en-US'
+
+### Show metric or imperial units
+# outputMetricUnits: false
 
 ### If using OTP Middleware, you can define the optional phone number options below.
 # phoneFormatOptions:
