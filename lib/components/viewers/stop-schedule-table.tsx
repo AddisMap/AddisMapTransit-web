@@ -17,11 +17,10 @@ import DepartureTime from './departure-time'
 
 // Styles for the schedule table and its contents.
 const StyledTable = styled.table`
-  border-spacing: collapse;
+  box-sizing: border-box;
   height: 100%;
   width: 100%;
   th {
-    background-color: #fff;
     box-shadow: 0 1px 0px 0px #ccc;
     font-size: 75%;
     position: sticky;

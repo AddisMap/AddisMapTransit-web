@@ -53,15 +53,15 @@ export const PlanTripButton = styled(Button)`
   background-color: green;
   color: #ffffffdd;
   margin-left: auto;
-  padding: 5px;
   &:active {
     ${activeCss}
     filter: saturate(50%);
     background: green;
   }
 
-  span.fa {
-    margin-left: -2.5px; /* without HiDPI things still look fine, just a little off center */
+  span {
+    display: inline-block;
+    margin-top: -5px;
   }
 `
 
@@ -101,7 +101,8 @@ export const StyledBatchPreferences = styled(SettingsSelectorPanel)`
   ${TripFormClasses.SettingLabel} {
     color: #686868;
     font-size: 14px;
-    font-weight: 100;
+    /* Override bootstrap's font-weight on labels so they don't appear bold in batch settings. */
+    font-weight: inherit;
     letter-spacing: 1px;
     padding-top: 8px;
     text-transform: uppercase;

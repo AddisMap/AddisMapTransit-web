@@ -89,6 +89,7 @@ components:
     bannedRoutes: Choisissez les lignes à éviter
     maxBike: Dist. à vélo ({unitsString})
     maxWalk: Dist. à pied ({unitsString})
+    walkReluctance: Réticence à marcher
     preferredRoutes: Choisissez les lignes preferées
   AfterSignInScreen:
     mainTitle: Redirection...
@@ -130,12 +131,13 @@ components:
         other {# emplacements disponibles}
       }
   AppMenu:
+    appMenu: App Menu
     callHistory: Historique des appels
     closeMenu: Fermer le menu
     fieldTrip: Groupes scolaires
     mailables: Prêt-à-poster
-    menuItemIconAlt: "Icône pour le menu {label}"
-    openMenu: "Ouvrir le menu"
+    openMenu: Ouvrir le menu
+    skipNavigation: Sauter la navigation
   BackToTripPlanner:
     backToTripPlanner: Retour au planificateur de trajets
   BatchResultsScreen:
@@ -218,10 +220,13 @@ components:
     enterLocation: Entrez le lieu
     setDestination: Choisissez la destination
     setOrigin: Choisissez le point de départ
+  MapillaryFrame:
+    title: Vue panoramique
   MapLayers:
     bike-rental: Vélos partagés {companies}
     car-rental: Voitures en location
     micromobility-rental: Trottinettes {companies}
+    shared-vehicles: "Véhicules partagés"
     park-and-ride: Parcs relais
     satellite: Satellite
     stops: Arrêts et stations
@@ -275,16 +280,6 @@ components:
     notificationChannelPrompt: Comment voulez-vous recevoir vos notifications ?
     notificationEmailDetail: "Les courriers de notification seront envoyés à :"
     noneSelect: Ne pas me notifier
-  PatternRow:
-    collapseOrExpandDepartures: >
-      {expanded, select,
-        true {Masquer}
-        other {Étendre}
-      } tous les départs pour la ligne {routeName}
-    departure: Départ
-    routeName: "<strong>{routeName}</strong> Direction {headsign}"
-    routeShort: "Direction {headsign}"
-    status: État
   PhoneNumberEditor:
     changeNumber: Changer de numéro
     invalidCode: Le code de vérification doit comporter 6 chiffres.
@@ -361,6 +356,7 @@ components:
     stopsTo: "Direction"
     selectADirection: "Choisissez une direction..."
   RouteRow:
+    operatorLogoAriaLabel: "{operatorName} stop:"
     operatorLogoAltText: "Logo de {operatorName}"
   # Used in both desktop and mobile
   RouteViewer:
@@ -420,6 +416,8 @@ components:
     destination: Direction
     route: Ligne
   StopTimeCell:
+    realtime: Based on realtime data
+    scheduled: Based on schedule data
     imminentArrival: Imminent
   # Used in both desktop and mobile
   StopViewer:
@@ -673,6 +671,13 @@ common:
     # Note to translator: noTransitFareProvided is width-constrained.
     noTransitFareProvided: Tarif inconnu
     transfers: "{transfers, plural, =0 {} one {# correspondance} other {# correspondances}}"
+    relativeCo2: >
+      {co2}
+      de CO<sub>2</sub> en 
+      {isMore, select,
+      true {plus}
+      other {moins}
+      } qu'en voiture
 
   # Note to translator: some of the strings below are used in sentences such as:
   # "No trip found for bike, walk, and transit."
