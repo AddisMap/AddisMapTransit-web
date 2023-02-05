@@ -361,6 +361,9 @@ itinerary:
 #       - WALK
 #       - BICYCLE
 
+co2:
+  enabled: true
+
 ### Popup config
 ### OTP-RR supports a full-screen modal popup that can be launched from a set of
 ### pre-set locations. Each button can be configured to open a different popup.
