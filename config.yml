@@ -179,7 +179,13 @@ modes:
     - mode: BICYCLE
       # This overrides the label generated from the i18n. Use when defining modes that are not supported by OTP i18n
       # label: Rental
-
+  combinations:
+    - mode: "WALK,TRANSIT"
+    - mode: "BICYLCE,TRANSIT"
+    - mode: "TRANIT"
+    - mode: "WALK"
+    - mode: "CAR"
+    - mode: "BICYCLE"
   transitModes:
     - mode: BUS
       label: Bus
