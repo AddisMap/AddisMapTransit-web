@@ -182,7 +182,8 @@ modes:
   combinations:
     - mode: "WALK,TRANSIT"
     - mode: "BICYLCE,TRANSIT"
-    - mode: "TRANIT"
+    - mode: "WALK,CAR"
+    - mode: "TRANSIT"
     - mode: "WALK"
     - mode: "CAR"
     - mode: "BICYCLE"
