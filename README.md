@@ -26,6 +26,17 @@ docker run -p 8080:80 addismaptransitweb-local
 
 Access http://localhost:8080/
 
+### Download an run the official image
+
+Create github token: https://github.com/settings/tokens (repo, read:packages)
+
+```
+docker login ghcr.io # username: your github username, password: the above created token
+docker run -p 8080:80 ghcr.io/addismap/addismaptransit-web:latest
+```
+
+Access http://localhost:8080/
+
 ### Build for the server
 
 We use GitHub actions to build the docker image on the main branch.
@@ -35,3 +46,4 @@ We use GitHub actions to build the docker image on the main branch.
 * ssh into server
 * `cd /srv/addismaptransit-web`
 * `docker-compose pull`
+* `docker-compose up -d`
